@@ -4,21 +4,24 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
     "skipLibCheck": true,
-
-    /* Bundler mode */
+    "baseUrl": "src",
+    "paths": {
+      "@pages/*": ["pages/*"],
+      "@renderer/*": ["renderer/*"],
+      "@components/*": ["components/*"],
+      "@api/*": ["api/*"]
+    },
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-
-    /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "renderer", "pages", "server"],
+  "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
